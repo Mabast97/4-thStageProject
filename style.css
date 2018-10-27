@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ----------- Navbar ----------- */
+
+.text-muted a
+{
+    display: block;
+    font-size: 1.2em;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.text-muted a:hover
+{
+    font-weight: bolder;
+    background-color: #1d1e1ffa;
+    border-radius: 15px;
+}
+
+#title { display: flex;}
+#title a 
+{
+    color: whitesmoke;
+    margin-left: auto;
+}
+#title i 
+{
+    color: whitesmoke;
+    font-size: 2em;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+#logo{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2em;
+    font-weight: bold;
+}
+/* ---------- Navbar ------------ */
+
+
+/* ---------- Welcome Part ------------ */
+#welcome-parent{
+    position: relative;
+}
+
+#welcome-video-contaienr{
+    z-index: -1;
+}
+
+#welcome-video{
+    width: 100%;
+    height: 100%;
+}
+
+#welcome-text{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: darkgoldenrod;
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+#video-opacity{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute; 
+    top: 0px;
+}
+
+
+#subject-section h1, #newest-video-section h1{
+    text-align: center;
+    color: darkgoldenrod;
+    font-size: 4em;
+    padding: 20px 0;
+}
+
+/* ---------- End Of Welcome Part ------------ */
+
+/* ---------- Subjects Part ------------ */
+
+#subject-items{
+    width: 100%;
+    height: 100%;
+}
+
+#subject-items{
+    text-align: center;
+}
+
+#subject-items button{
+    font-size: 3em;
+    color: goldenrod;
+    cursor: pointer;
+    background-color: whoverable-divte;
+    border: none;
+    outline: none;
+    padding-bottom: 10px;
+}
+
+#subject-items button:hover{
+    color: rgb(116, 88, 11);
+}
+
+.subject-divs{
+    display: flex;
+}
+
+.img-containers{
+    position: relative;
+    width: 30%;
+    height: 300px;
+    display: flex;
+    margin: 15px auto;
+}
+
+.img-containers img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-containers .hoverable-div {
+    background-color: rgba(54, 31, 28, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: goldenrod;
+    
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+ }
+
+ .hoverable-div h3, .hoverable-div a{
+     margin: 10%;
+ }
+ 
+ .img-containers:hover .hoverable-div {
+   opacity: 1;
+   transition-property: opacity;
+   transition-duration: .5s;
+ }
+
+/* ---------- End Of Subjects Part ------------ */
+
+
+#parallax1{
+    background: url(media/Images/books.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;  height: 450px;
+}
+
+
+/* ---------- Newest Videos Part ------------ */
+
+#newest-video{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#newest-videos{
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+#newest-videos video{
+    width: 30%;
+    height: 100%;
+    margin: 0 5px;
+}
+
+#going-left, #going-right{
+    width: 50px; height: 60px;
+    background-color: lightcoral;
+    margin: auto 0; padding: 10px;
+    border-radius: 50%;
+}
+
+/* ---------- End Of Newest Videos Part ------------ */
+
+#parallax2{
+    background-image: url(media/Images/contact-man.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+}
+
+#contact-container{
+    display: flex;
+    height: 100%;
+    border: 4px solid lightgray;
+}
+
+#map{
+    width: 50%;
+    height: auto;
+    background-color: lightblue;
+}
+
+#map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#form{
+    width: 50%;
+    height: 100%;
+    background-color: indianred;
+    text-align: center;
+    padding: 15px 0;
+    color: whoverable-divte;
+}
+
+
+#form form input, #form form textarea{
+    width: 80%;
+    min-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 1px;
+    font-size: 1.1em;
+    border: 2px solid rgb(77, 74, 74);
+    resize: none;
+    outline: none;
+}
+
+#send{
+    width: 70%;
+    height: 55px;
+    background-color: #633740;
+    color: whoverable-divtesmoke;
+    font-size: 1.8em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#send:hover{
+    background-color: darkred;
+    border-radius: 20px;
+}
+
+#form form textarea{
+    height: 125px;
+}
+
+#form form input{
+    height: 40px;
+}
+
+#footer{
+    text-align: center;
+    height: 30px;
+    background-color: black;
+    color: whoverable-divte;
+    padding: 5px 0;
+}
+
