@@ -5,6 +5,15 @@
 }
 /* ----------- Navbar ----------- */
 
+body::-webkit-scrollbar{
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(225, 238, 245), #0606ee);
+    border-radius: 10px;
+}
+
 .text-muted a
 {
     display: block;
@@ -42,7 +51,60 @@
     font-size: 2em;
     font-weight: bold;
 }
+
+#liveNote{
+    font-size: 2em;
+    color: red;
+}
+
+#liveNote2{
+    font-size: 1.5em;
+    color: red;
+}
+
+.modal-content{
+    background-color: lightgrey;
+}
+
+.modal-body form input, 
+.modal-body form label,
+.modal-body form select{ 
+    display: block;
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+}
+
+.modal-body form input:focus{ background-color: rgb(220, 233, 232); transition: all 0.4s}
+.modal-body form input:focus::placeholder{ color: rgb(43, 42, 42); }
+
+.modal-footer {
+    justify-content: space-around;
+}
+
+.modal-footer button{
+    width: 70%;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#profileLink {
+    color: gray;
+    pointer-events: none;
+   }
+
+
 /* ---------- Navbar ------------ */
+
+
+
+
 
 
 /* ---------- Welcome Part ------------ */
@@ -71,29 +133,117 @@
     text-shadow: 0 2px 5px rgba(0,0,0,0.8);
 }
 
-#video-opacity{
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute; 
-    top: 0px;
+/* ---------- End Of Welcome Part ------------ */
+
+
+
+
+
+
+
+/* ------------------ Newests ------------------ */
+
+#newests{
+    display: flex;
+    width: 98%;
+    max-height: 500px;
+    height: 500px;
+    margin: 15px auto;
+    border-bottom: 2px solid lightgray;
 }
 
+.card-header{ text-align: center;}
 
-#subject-section h1, #newest-video-section h1{
+#left-newest::-webkit-scrollbar, #right-newest::-webkit-scrollbar{
+    width: 7px;
+}
+
+#left-newest, #right-newest{
+    width: 100%; 
+    height: 100%;
+    overflow-y: auto
+}
+
+#left-newest{
+    margin-right: 10px;
+}
+
+.newest-items{
+    overflow-y: auto;
+    height: 100%;
+    padding: 15px;
+}
+
+.news-single-items{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #325775;
+    border: 2px solid lightgray;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.news-single-items a img{
+    width: 200px;
+    height: 100%;
+}
+
+.news-single-items a{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.texts{
+    padding: 10px;
+}
+
+.news-single-items span[id*="time-of-posted"]{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+.news-single-items span[id*="posted-by-"]{
+    position: absolute;
+    bottom: 2px;
+    left: 210px;
+}
+
+.news-single-items span, .news-single-items span a { color: lightblue;}
+
+.hr{
+    width: 400px;
+    margin: 0 auto;
+    height: 10px;
+    color: lightcoral;
+}
+/* ------------------ End Of Newests Part ----------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Subjects Part ------------ */
+
+#subject-section{ margin-top: 15px;}
+
+#subject-section h1{
     text-align: center;
     color: darkgoldenrod;
     font-size: 4em;
     padding: 20px 0;
-}
-
-/* ---------- End Of Welcome Part ------------ */
-
-/* ---------- Subjects Part ------------ */
-
-#subject-items{
-    width: 100%;
-    height: 100%;
 }
 
 #subject-items{
@@ -132,79 +282,62 @@
     height: 100%;
 }
 
-.img-containers .hoverable-div {
-    background-color: rgba(54, 31, 28, 0.9);
+.img-containers:hover img, .img-containers:hover .opacityDiv{
+    border-radius: 8px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.img-containers .hoverable-div, .opacityDiv {
+    background-color: rgba(100, 86, 84, 0.9);
     position: absolute;
     width: 100%;
     height: 100%;
-    color: goldenrod;
+    color: rgb(216, 210, 196);
     
     opacity: 0;
     transition-property: opacity;
     transition-duration: .5s;
  }
-
- .hoverable-div h3, .hoverable-div a{
-     margin: 10%;
- }
  
- .img-containers:hover .hoverable-div {
-   opacity: 1;
-   transition-property: opacity;
-   transition-duration: .5s;
+ .img-containers:hover {
+   transform: scale(1.05);
+   transition-property: all;
+   transition-duration: 1s;
  }
 
+.opacityDiv h2{
+    text-decoration: none;
+    color: white;
+    margin-top: 30%;
+    font-size: 2.2em;
+    padding: 10px;
+    border: 3px solid chocolate;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.opacityDiv:hover{ opacity: 1; transition: 0.5s; }
+
+ .btn-danger{
+     border: 1px double white;
+     background-color: rgba(0, 0, 0, 0.349);
+ }
 /* ---------- End Of Subjects Part ------------ */
 
-
 #parallax1{
-    background: url(media/Images/books.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;  height: 450px;
-}
-
-
-/* ---------- Newest Videos Part ------------ */
-
-#newest-video{
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-#newest-videos{
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 5px;
-}
-
-#newest-videos video{
-    width: 30%;
-    height: 100%;
-    margin: 0 5px;
-}
-
-#going-left, #going-right{
-    width: 50px; height: 60px;
-    background-color: lightcoral;
-    margin: auto 0; padding: 10px;
-    border-radius: 50%;
-}
-
-/* ---------- End Of Newest Videos Part ------------ */
-
-#parallax2{
-    background-image: url(media/Images/contact-man.png);
+    background-image: url(media/Images/compute.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5;
     width: 100%;
     height: 450px;
 }
 
+
+/* --------------- contact us --------------- */
 #contact-container{
     display: flex;
     height: 100%;
@@ -269,11 +402,171 @@
     height: 40px;
 }
 
+/* ------------------- End of contact us --------------- */
 #footer{
     text-align: center;
     height: 30px;
     background-color: black;
     color: whoverable-divte;
     padding: 5px 0;
+    color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================================================================= */
+
+
+/* =========== SUBJECTS PAGE =========== */
+
+#subject-lists div{
+    margin: 8px;
+    width: 90%;
+    height: 100px;
+    background-color: #325775;
+    border-radius: 5px;
+}
+
+#subject-lists div img{
+    width: 210px;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.display-flex{
+    display: flex;
+    color: white;
+}
+
+.display-flex h2{ margin: auto auto;}
+
+.display-flex a{
+    display: none;
+    border: 2px solid rgb(75, 73, 73);
+    margin-left: 8%;
+    width: 90px;
+    height: 70px;
+    color: black;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+    font-size: 1.4em;
+    background-color: rgb(124, 196, 161);
+    padding-top: 15px;
+}
+
+.display-flex a{
+    outline: none;
+}
+
+.display-flex:hover h2{ 
+    display: none;
+}
+.display-flex:hover a { 
+    display: inline;
+    border: 2px solid black;
+}
+
+#left-part-subjects{ 
+    border-right: 2px solid lightgray;
+    margin-bottom: 10px;
+}
+
+#left-part-subjects a{
+    text-decoration: none;
+    color: #325775;
+    font-size: 1.2em;
+    padding: 6px;
+    border-bottom: 2px solid lightgray;
+    display: block;
+}
+
+#left-part-subjects a:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+#list-of-books{
+    border-left: 2px solid lightgray;
+}
+
+#books-part .card-footer a{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+#list-of-books #books-part .card-body .info{
+    border-top: 2px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+}
+
+#books-part .card-body{ 
+    display: block; 
+    text-align: center;
+}
+
+#list-of-books .card{ margin-bottom: 15px;}
+
+#list-of-books{
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* ============================================================================================= */
+/* ------ Video PAGE ------ */
+
+.videos{
+    margin-top: 25px;
+    columns: 3;
+}
+
+.videos div{
+    border: 2px solid lightgray;
+    width: 380px;
+    height: 250px;
+    max-height: 250px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.videos div iframe{
+    width: 100%;
+    height: 85%;
+}
+    
+
+
+    
+
+
+
+
+/* ============================================================================================= */
+/* ------ Texts PAGE ------ */
+#texts .col-md-3 .card{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

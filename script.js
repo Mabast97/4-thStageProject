@@ -2,7 +2,7 @@ var typed = new Typed("#welcome-text", {
     strings: [
     "Hello World",
     "Holla World",
-    "Hey Mabast",
+    "Hey You",
     "Welcome To Here"
     ],
     startDelay: 300,
@@ -13,3 +13,5 @@ var typed = new Typed("#welcome-text", {
     // cursorChar: '/',
     loop: true
     });
+
+    
